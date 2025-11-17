@@ -1,89 +1,167 @@
-/* Style général */
+/* ----------------------
+   FONTS & GLOBAL
+----------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9fb;
-    color: #333;
+    font-family: "Poppins", sans-serif;
+    background: #0e0e10;
+    color: #e6e6e6;
+    line-height: 1.6;
 }
 
-/* En-tête */
+/* ----------------------
+   HEADER
+----------------------- */
 header {
-    background-color: #004aad;
-    color: white;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-header .photo img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-    border: 3px solid white;
+header .logo {
+    font-size: 28px;
+    font-weight: 600;
+    color: #8a5cff;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
+header nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #e6e6e6;
+    transition: 0.3s;
 }
 
-header h2 {
-    margin: 5px 0;
-    font-weight: normal;
-    font-size: 1.2em;
-    color: #dbe9ff;
+header nav a:hover {
+    color: #8a5cff;
 }
 
-/* Sections principales */
-main {
-    padding: 30px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
-h3 {
-    border-bottom: 2px solid #004aad;
-    padding-bottom: 5px;
-    color: #004aad;
-}
-
-.item {
-    margin-top: 10px;
-}
-
-.item h4 {
-    margin: 5px 0;
-}
-
-.item .date {
-    font-size: 0.9em;
-    color: #666;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-ul li {
-    background-color: #eaf0ff;
-    display: inline-block;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 8px;
-}
-
-/* Pied de page */
-footer {
-    background-color: #004aad;
-    color: white;
+/* ----------------------
+   HERO
+----------------------- */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 10px 0;
+    background: radial-gradient(circle at top, #1a1a1d, #0e0e10);
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #8a5cff;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #8a5cff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #a287ff;
+}
+
+.btn.small {
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+/* ----------------------
+   ABOUT
+----------------------- */
+.about {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* ----------------------
+   PROJECTS
+----------------------- */
+.projects {
+    padding: 80px 10%;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: #1a1a1d;
+    padding: 25px;
+    border-radius: 12px;
+    transition: transform 0.3s, background 0.3s;
+    border: 1px solid #26262a;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    background: #222227;
+}
+
+.project-card h3 {
+    color: #8a5cff;
+    margin-bottom: 10px;
+}
+
+/* ----------------------
+   CONTACT
+----------------------- */
+.contact {
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+/* ----------------------
+   FOOTER
+----------------------- */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    color: #5a5a5a;
+    font-size: 14px;
 }

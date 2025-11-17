@@ -3,74 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Nom Prénom</title>
-    <link rel="stylesheet" href="font.css">
+    <title>Portfolio Cybersécurité - Étudiant</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- Effet glitch en arrière-plan -->
+    <div class="background-glitch"></div>
+
     <header>
-        <div class="logo">NP</div>
-        <nav>
-            <a href="#about">À propos</a>
-            <a href="#projects">Projets</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1 class="glitch" data-text="Etudiant en Cybersécurité">Étudiant en Cybersécurité</h1>
+        <p class="subtitle">Portfolio & Projets — 1ère année</p>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Salut, moi c’est <span>Nom Prénom</span></h1>
-            <p>Développeur Web • Créatif • Passionné</p>
-            <a href="#projects" class="btn">Voir mes projets</a>
-        </div>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" class="about">
+    <section id="presentation">
         <h2>À propos</h2>
         <p>
-            Je suis un développeur passionné par la création d'expériences web modernes,
-            élégantes et efficaces. Mon objectif est de combiner logique, design et créativité
-            pour donner vie à des projets uniques.
+            Étudiant passionné par la cybersécurité : réseau, systèmes, hacking éthique et analyse de vulnérabilités. 
+            J’aime comprendre comment fonctionnent les systèmes et comment les sécuriser.
         </p>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="projects">
-        <h2>Projets</h2>
-
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Projet 1</h3>
-                <p>Une application moderne en React permettant de gérer des tâches.</p>
-                <a href="#" class="btn small">Voir le projet</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Projet 2</h3>
-                <p>Site vitrine réalisé pour une entreprise locale.</p>
-                <a href="#" class="btn small">Voir le projet</a>
-            </div>
-
-            <div class="project-card">
-                <h3>Projet 3</h3>
-                <p>Interface interactive utilisant des animations GSAP.</p>
-                <a href="#" class="btn small">Voir le projet</a>
-            </div>
+    <section id="skills">
+        <h2>Compétences</h2>
+        <div class="skill-list">
+            <div class="skill">Linux Basics</div>
+            <div class="skill">Analyse Réseau</div>
+            <div class="skill">Python</div>
+            <div class="skill">Sécurité Web</div>
+            <div class="skill">OSINT</div>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Intéressé par une collaboration ?</p>
-        <a href="mailto:monmail@example.com" class="btn">Envoyer un email</a>
+    <section id="projects">
+        <h2>Projets</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <h3>Scan Réseau Python</h3>
+                <p>Création d’un mini scanner réseau (sockets, scan ports, récupération infos).</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Analyse d’un Malware</h3>
+                <p>Étude et sandboxing d’un malware simple dans un environnement isolé.</p>
+            </div>
+
+            <div class="project-card">
+                <h3>Audit Sécurité d’un Site</h3>
+                <p>Découverte de vulnérabilités courantes (XSS, bruteforce, erreurs config).</p>
+            </div>
+
+        </div>
     </section>
 
     <footer>
-        <p>© 2024 Nom Prénom — Tous droits réservés.</p>
+        <p>Contact : <span>votre.mail@exemple.com</span></p>
     </footer>
 
 </body>

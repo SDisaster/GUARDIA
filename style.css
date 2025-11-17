@@ -162,3 +162,25 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* --- PASSIONS --- */
+.passions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.passion-card {
+    background: #111;
+    padding: 20px;
+    border: 1px solid #222;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.passion-card:hover {
+    border-color: cyan;
+    transform: scale(1.03);
+    box-shadow: 0 0 10px cyan;
+}

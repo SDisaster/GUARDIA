@@ -122,31 +122,81 @@ h2 {
 }
 
 /* === CARDS GENERALES === */
-.projects-grid,
-.passions-grid {
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
 
-.project-card,
-.passion-card {
+.project-card {
     background: #111;
     padding: 20px;
     border: 1px solid #222;
     border-radius: 8px;
     transition: 0.3s;
 }
+
 .project-card:hover {
     border-color: red;
     box-shadow: 0 0 10px red;
     transform: scale(1.03);
 }
+
+/* === PASSIONS (nouveau style cyber terminal) === */
+.passions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 25px;
+    border-left: 3px solid rgba(0, 255, 255, 0.25);
+    padding-left: 15px;
+}
+
+.passion-card {
+    background: rgba(10, 10, 10, 0.65);
+    padding: 15px 18px;
+    border: 1px solid #111;
+    border-radius: 6px;
+    font-family: "IBM Plex Mono", monospace;
+    position: relative;
+    overflow: hidden;
+    transition: 0.25s ease;
+}
+
+.passion-card::before {
+    content: ">";
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: cyan;
+    opacity: 0;
+    transition: 0.25s;
+    font-weight: bold;
+}
+
 .passion-card:hover {
     border-color: cyan;
-    box-shadow: 0 0 10px cyan;
-    transform: scale(1.03);
+    transform: translateX(6px);
+    box-shadow: 0 0 8px cyan;
+}
+
+.passion-card:hover::before {
+    opacity: 1;
+    left: 5px;
+}
+
+.passion-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.2rem;
+    color: cyan;
+}
+
+.passion-card p {
+    margin: 0;
+    opacity: 0.85;
+    font-size: 0.95rem;
 }
 
 /* === PHOTO PROFIL === */
@@ -208,4 +258,28 @@ footer a {
 }
 footer a:hover {
     text-decoration: underline;
+}
+/* ==== Fond grille latérale ==== */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 14vw;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(0,255,255,0.06) 0px,
+        rgba(0,255,255,0.06) 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: -1;
+}
+
+body::before { left: 0; }
+body::after  { right: 0; }
+body::before,
+body::after {
+    box-shadow: 0 0 25px rgba(0,255,255,0.08) inset;
 }

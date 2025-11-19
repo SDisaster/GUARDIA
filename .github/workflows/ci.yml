@@ -13,6 +13,18 @@ jobs:
       - name: Checkout du code
         uses: actions/checkout@v4
 
+      - name: Installer Node.js (si projet JS)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+        if: ${{ hashFiles('package.json') != '' }}
+
+      - name: Installer Python (si projet Python)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+        if: ${{ hashFiles('requirements.txt') != '' || hashFiles('**/*.py') != '' }}
+
       - name: Installer les dépendances
         run: |
           if [ -f package.json ]; then npm install; fi
